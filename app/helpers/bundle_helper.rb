@@ -1,7 +1,7 @@
 require 'find'
 module BundleHelper
   def bundle_files?
-    Rails.production? || Rails.staging? || params[:bundle] || cookies[:bundle] == "yes"
+    Rails.env.production? || Rails.env.staging? || params[:bundle] || cookies[:bundle] == "yes"
   end
 
   def javascript_bundle(*sources)
@@ -35,7 +35,7 @@ module BundleHelper
     output = ""
     sources = sources.to_a
     sources.each do |pair|
-      output << javascript_src_tag(Rails.development? ? "dev/#{pair[0]}" : pair[1], {})
+      output << javascript_src_tag(Rails.env.development? ? "dev/#{pair[0]}" : pair[1], {})
     end
     output
   end
