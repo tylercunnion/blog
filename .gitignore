@@ -2,3 +2,8 @@ tmp/*
 db/*.sqlite3
 log/*
 config/database.yml
+
+vendor/gems/gems
+vendor/gems/specifications
+vendor/gems/doc
+vendor/gems/environment.rb
