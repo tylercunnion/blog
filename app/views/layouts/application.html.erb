@@ -2,10 +2,17 @@
 <html>
 	<head>
 		<title>Blog!</title>
+		<%= stylesheet_bundle 'common' %>
 		<%= javascript_dev ['jquery-1.4.2', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'] %>
 		<%= javascript_bundle 'common' %>
 	</head>
 	<body>
+		<header>tylercunnion.com</header>
+		<nav>
+			<ul>
+				<li><a href="/">Home</a></li>
+			</ul>
+		</nav>
 		<%= yield %>
 		<footer>
 			<p>Footer stuff goes here</p>
