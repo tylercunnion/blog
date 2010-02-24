@@ -36,6 +36,7 @@ ActionController::Routing::Routes.draw do |map|
   # See how all your routes lay out with "rake routes"
 
   map.resource :user_session
+  map.resource :account, :controller => "users"
   map.resources :users
   map.resources :posts
 
