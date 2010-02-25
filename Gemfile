@@ -7,6 +7,7 @@ gem "less"
 gem "cssmin"
 gem "jsmin"
 gem "grit"
+gem "rdiscount"
 
 group :development do
 	gem 'sqlite3'

@@ -6,6 +6,6 @@
 		<%= time_element(@post.created_at) %>
 	</header>
 
-	<%=h @post.text %>
+	<%= RDiscount.new(@post.text).to_html %>
 
 </article>
