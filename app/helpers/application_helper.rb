@@ -7,7 +7,7 @@ module ApplicationHelper
       :attribute_format => '%Y-%m-%dT%H:%MZ',
       :text_format => '%B %e, %Y'
     }.merge(options)
-    return '<time datetime="' + time.utc.strftime(options[:attribute_format]) + '">' + time.local.strftime(options[:text_format]) + '</time>'
+    return '<time datetime="' + time.utc.strftime(options[:attribute_format]) + '">' + time.localtime.strftime(options[:text_format]) + '</time>'
   end
   
   def smart_header(content, level=1, html_options={})
