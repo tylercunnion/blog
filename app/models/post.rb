@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
 	
 	before_validation :create_slug, :create_summary
 	
-	validates_presence_of :title, :text, :slug
+	validates_presence_of :title, :text
 	validates_uniqueness_of :slug
 	
 	
