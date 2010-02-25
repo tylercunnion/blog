@@ -6,7 +6,7 @@
 	<%= RDiscount.new(post.text).to_html %>
 	
 	<footer>
-		Posted at <%= time_element(post.created_at) %> by <%=h post.author.name %>
+		Posted on <%= time_element(post.created_at) %> by <%=h post.author.name %>
 	</footer>
 	
 </article>
