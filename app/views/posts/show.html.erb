@@ -1,6 +1,11 @@
 <% @page_title = @post.title -%>
-<h1><%=h @post.title %></h1>
+<article>
+	<header>
+		<h1><%=h @post.title %></h1>
+		<p class="author">By <%=h @post.author.name %></p>
+		<%= time_element(@post.created_at) %>
+	</header>
 
-<p class="author">By <%=h @post.author.name %></p>
+	<%=h @post.text %>
 
-<%=h @post.text %>
+</article>
