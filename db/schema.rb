@@ -9,13 +9,13 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100225044032) do
+ActiveRecord::Schema.define(:version => 20100225223557) do
 
   create_table "posts", :force => true do |t|
-    t.string   "title"
-    t.string   "slug"
+    t.string   "title",                         :null => false
+    t.string   "slug",                          :null => false
     t.string   "summary"
-    t.string   "text"
+    t.string   "text",                          :null => false
     t.boolean  "published",  :default => false
     t.datetime "created_at"
     t.datetime "updated_at"
