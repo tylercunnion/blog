@@ -14,8 +14,8 @@ header, footer { display: block; }
 	margin: 0 auto (0 - @footer_height);
 }
 
-#push, #page-footer {
-	height: @footer_height;
+#push {
+	height: @footer_height + 1;
 }
 
 #page-header {
@@ -23,6 +23,7 @@ header, footer { display: block; }
 }
 
 #page-footer {
+	height: @footer_height;
 	width: 100%;
 	background: #000;
 	color: #fff;
