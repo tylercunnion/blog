@@ -1,1 +1,15 @@
-<%= render :partial => 'post', :collection => @posts, :locals => {:header_level => 2} %>
+<% @posts.each do |post| -%>
+	<article>
+		<header>
+			<h1><%= link_to(post.title, post) %></h1>
+		</header>
+		
+		<%= RDiscount.new(post.text).to_html %>
+		
+		<footer>
+			<p>Posted on <%= time_element(post.created_at) %> by <%=h post.author.name %></p>
+			<%= "<p>" + link_to("Edit Post", edit_post_url(post)) + "</p>" if current_user && current_user == post.author %>	
+		</footer>
+		
+	</article>
+<% end -%>
