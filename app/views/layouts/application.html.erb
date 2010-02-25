@@ -8,16 +8,17 @@
 	</head>
 	<body>
 		<div id="wrapper">
-			<header><%= image_tag 'name.png' %></header>
+			<header id="page-header"><%= image_tag 'name.png' %></header>
 			<nav>
 				<ul>
 					<li><a href="/">Home</a></li>
 				</ul>
 			</nav>
-				<%= yield %>
+			<%= yield %>
+			<div id="push"></div>	
 		</div>
 		<footer id="page-footer">
-			<p>Footer stuff goes here</p>
+			<div id="footer-content">Footer stuff goes here</div>
 		</footer>
 	</body>
 </html>
