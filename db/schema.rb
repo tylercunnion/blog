@@ -12,14 +12,14 @@
 ActiveRecord::Schema.define(:version => 20100225044032) do
 
   create_table "posts", :force => true do |t|
-    t.string   "title",                         :null => false
-    t.string   "slug",                          :null => false
-    t.string   "summary",                       :null => false
-    t.string   "text",                          :null => false
-    t.boolean  "published",  :default => false, :null => false
-    t.datetime "created_at",                    :null => false
-    t.datetime "updated_at",                    :null => false
-    t.integer  "author_id",                     :null => false
+    t.string   "title"
+    t.string   "slug"
+    t.string   "summary"
+    t.string   "text"
+    t.boolean  "published",  :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "author_id"
   end
 
   create_table "users", :force => true do |t|
@@ -29,9 +29,9 @@ ActiveRecord::Schema.define(:version => 20100225044032) do
     t.string   "crypted_password",                 :null => false
     t.string   "password_salt",                    :null => false
     t.string   "persistence_token",                :null => false
-    t.datetime "created_at",                       :null => false
-    t.datetime "updated_at",                       :null => false
-    t.integer  "posts_count",       :default => 0, :null => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "posts_count",       :default => 0
   end
 
 end

@@ -8,8 +8,6 @@ gem "cssmin"
 gem "jsmin"
 gem "grit"
 gem "rdiscount"
+gem "mysql"
 
-group :development do
-	gem 'sqlite3'
-end
 
