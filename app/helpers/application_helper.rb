@@ -10,9 +10,9 @@ module ApplicationHelper
     return '<time datetime="' + time.utc.strftime(options[:attribute_format]) + '">' + time.local.strftime(options[:text_format]) + '</time>'
   end
   
-  def smart_header(content, level=1, attributes={})
+  def smart_header(content, level=1, html_options={})
     h_string = '<h' + level.to_s
-    attributes.each {|key, value| h_string = h_string + ' ' + key + '="' + value + '"' }
+    html_options.each {|key, value| h_string = h_string + ' ' + key + '="' + value + '"' }
     h_string = h_string + '>' + content + '</h' + level.to_s + '>'
     
     return h_string
