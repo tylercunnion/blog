@@ -1,0 +1,8 @@
+<article>
+	<header>
+		<%= smart_header link_to(post.title, post), header_level %>
+		<p class="author">By <%=h post.author.name %></p>
+		<%= time_element(post.created_at) %>
+	</header>
+	<%= RDiscount.new(post.text).to_html %>
+</article>

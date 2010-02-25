@@ -1,11 +1,3 @@
 <% @page_title = @post.title -%>
-<article>
-	<header>
-		<h1><%=h @post.title %></h1>
-		<p class="author">By <%=h @post.author.name %></p>
-		<%= time_element(@post.created_at) %>
-	</header>
 
-	<%= RDiscount.new(@post.text).to_html %>
-
-</article>
+<%= render :partial => "post", :locals => {:header_level => 1, :post => @post} %>
