@@ -4,7 +4,7 @@
 
 html, body { height: 100%; }
 
-header, footer, article { display: block; }
+header, footer, article, section, aside, nav { display: block; }
 
 #wrapper { 
 	width: 960px;
@@ -48,4 +48,21 @@ header, footer, article { display: block; }
 	width: 940px;
 	margin: auto;
 	padding-top: .5em;
+}
+
+.borderradius #sidebar {
+	aside, nav, section {
+		border-radius: 15px; 
+		-moz-border-radius: 15px;
+		-webkit-border-radius: 15px;
+	}
+}
+
+#sidebar {
+	aside, nav, section {
+		border: 1px solid #000;
+		background: #c3c3c3;
+		padding: 15px;
+		margin-bottom: 15px;
+	}
 }
