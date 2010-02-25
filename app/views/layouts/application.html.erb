@@ -7,13 +7,15 @@
 		<%= javascript_bundle 'common' %>
 	</head>
 	<body>
-		<header>tylercunnion.com</header>
-		<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-			</ul>
-		</nav>
-		<%= yield %>
+		<div id="wrapper">
+			<header>tylercunnion.com</header>
+			<nav>
+				<ul>
+					<li><a href="/">Home</a></li>
+				</ul>
+			</nav>
+				<%= yield %>
+		</div>
 		<footer>
 			<p>Footer stuff goes here</p>
 		</footer>

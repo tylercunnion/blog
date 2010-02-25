@@ -1,6 +1,22 @@
 @import '_reset.css';
 
+@footer_height: 4em;
+
 body {
 	width: 960px;
 	margin: auto;
 }
+
+html, body { height: 100%; }
+
+#wrapper { 
+	height: auto !important;
+	min-height: 100%;
+	margin-bottom: 0 - @footer_height;
+}
+
+footer {
+	height: @footer_height;
+	display: block;
+}
+
