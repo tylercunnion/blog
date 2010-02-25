@@ -14,8 +14,20 @@ header, footer, article { display: block; }
 	margin: 0 auto (0 - @footer_height);
 }
 
+#content {
+	float: left;
+	width: 620px;
+	margin-right: 20px;
+}
+
+#sidebar {
+	float: left;
+	width: 300px;
+}
+
 #push {
 	height: @footer_height + 1;
+	clear: both;
 }
 
 #page-header {
