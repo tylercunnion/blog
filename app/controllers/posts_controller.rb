@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	before_filter :require_user, :only => [:edit, :update, :new, :create, :delete]
 
 	def index
-		@posts = Post.all(:include => :author)
+		@posts = Post.all(:include => :author, :order => 'created_at DESC')
 	end
 
 	def new
