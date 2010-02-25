@@ -1,5 +1,9 @@
-@base_font_size: 12em;
+@base_font_size: 16em;
 @line_height: 1.5 * @base_font_size;
+
+body {
+	font-size: 16px;
+}
 
 p {
 	font-size: 1em;
@@ -14,12 +18,13 @@ h1 {
 
 h2 {
 	font-size: 18 / @base_font_size;
-	line-height: (@line_height * 2) / 18;
+	line-height: @line_height / 18;
+	margin-bottom: @line_height / 18;
 }
 
 h3 {
-	font-size: 14 / @base_font_size;
-	line-height: @line_height / 14;
+	font-size: 16 / @base_font_size;
+	line-height: @line_height / 16;
 }
 
 h1, h2, h3 {
