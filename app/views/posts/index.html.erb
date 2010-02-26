@@ -7,6 +7,7 @@
 			</hgroup>
 		</header>
 		
-		<%= markdown(post.text) %>		
+		<%= markdown(post.summary).blank? ? markdown(post.text).split("</p>")[0] + "</p>" : markdown(post.summary) %>
+		<p><%=link_to("Read More&hellip;", post) %></p>
 	</article>
 <% end -%>
