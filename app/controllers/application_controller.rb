@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
+  
+  before_filter :twitter_feed
 
   private
   	def current_user_session
@@ -45,6 +47,11 @@ class ApplicationController < ActionController::Base
 	def redirect_back_or_default(default)
 		redirect_to(session[:return_to] || default)
 	end
+	
+	def twitter_feed
+	  search = Twitter::Search.new.from('tylercunnion').per_page(5)
+	  @tweets = search.fetch.results
+  end
 
 
   

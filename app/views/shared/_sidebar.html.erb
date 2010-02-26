@@ -3,8 +3,10 @@
 </aside>
 
 <aside>
-<h3>Twitter TRACKER</h3>
-<p>stupid stuff</p>
-<p>dumb crap</p>
+	<h3>Twitter TRACKER</h3>
+	<% @tweets.each do |tweet| -%>
+		<p><%=h tweet.text %></p>
+		<p><%= time_element(Time.parse(tweet.created_at)) %></p>
+	<% end -%>
 </aside>
 

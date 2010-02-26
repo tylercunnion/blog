@@ -9,5 +9,5 @@ gem "jsmin"
 gem "grit"
 gem "rdiscount"
 gem "mysql"
-
+gem "twitter"
 
