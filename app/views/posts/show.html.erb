@@ -4,7 +4,7 @@
 		<h1><%= @post.title %></h1>
 	</header>
 	
-	<%= RDiscount.new(@post.text).to_html %>
+	<%= markdown(@post.text) %>
 	
 	<footer>
 		<p>Posted on <%= time_element(@post.created_at) %> by <%=h @post.author.name %></p>

@@ -7,6 +7,6 @@
 			</hgroup>
 		</header>
 		
-		<%= RDiscount.new(post.text).to_html %>		
+		<%= markdown(post.text) %>		
 	</article>
 <% end -%>
