@@ -3,9 +3,8 @@
 		<header>
 			<hgroup>
 				<h1><%= link_to(post.title, post) %></h1>
-				<h2><%= time_element(post.created_at) %></h2>
+				<h2><%= time_element(post.created_at) %> <%= "&mdash;" + link_to("Edit Post", edit_post_url(post)) if current_user && current_user == post.author %></h2>
 			</hgroup>
-			<%= "<p>" + link_to("Edit Post", edit_post_url(post)) + "</p>" if current_user && current_user == post.author %>
 		</header>
 		
 		<%= RDiscount.new(post.text).to_html %>		
