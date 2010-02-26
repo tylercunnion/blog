@@ -3,6 +3,7 @@
 
 body {
 	font-size: 16px;
+	font-family: Georgia, serif;
 }
 
 p {
@@ -39,7 +40,11 @@ article {
 	}
 
 	footer { 
-		p { margin: 0; }
+		p { 
+			margin: 0; 
+			font-size: 12 / @base_font_size;
+			line-height: @line_height / 12;
+		}
 	}
 
 	margin-bottom: @line_height / @base_font_size;
