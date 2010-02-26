@@ -1,12 +1,12 @@
 <aside>
-	<h3>This is a thing</h3>
+	<h3>About</h3>
+	<p>This is my blog about stupid crap. Get ready for rock and roll.</p>
 </aside>
 
-<aside>
-	<h3>Twitter TRACKER</h3>
+<aside id="twitter-tracker">
+	<h3>Twitter Tracker</h3>
 	<% @tweets.each do |tweet| -%>
-		<p><%=h tweet.text %></p>
-		<p><%= time_element(Time.parse(tweet.created_at)) %></p>
+		<p class="tweet"><%=h tweet.text %> <%= time_element(Time.parse(tweet.created_at), {:text_format => "%r %D"}) %></p>
 	<% end -%>
 </aside>
 
