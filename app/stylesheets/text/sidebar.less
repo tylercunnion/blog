@@ -1,0 +1,29 @@
+@base_font_size: 10em;
+@line_height: 12em;
+
+@base_font_size: 16em;
+@line_height: 1.5 * @base_font_size;
+
+#sidebar {
+	font-size: 10px;
+	font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	
+
+	p {
+		font-size: 1em;
+		line-height: @line_height / @base_font_size;
+		margin-bottom: @line_height / @base_font_size;
+	}
+	
+	h2 {
+		font-size: 16 / @base_font_size;
+		line-height: @line_height / 16;
+		margin-bottom: @line_height / 8;
+	}
+
+	h3 {
+		font-size: 14 / @base_font_size;
+		line-height: @line_height / 7;
+	}
+
+}
