@@ -10,4 +10,5 @@ gem "grit"
 gem "rdiscount"
 gem "mysql"
 gem "twitter"
+gem "paperclip"
 
