@@ -1,16 +1,26 @@
 <h1>Listing assets</h1>
 
 <table>
-  <tr>
-  </tr>
+	<thead>
+		<tr>
+			<th>File Name</th>
+			<th>Content Type</th>
+			<th>File Size</th>
+  		</tr>
+	</thead>
 
+	<tbody>
 <% @assets.each do |asset| %>
-  <tr>
-    <td><%= link_to 'Show', asset %></td>
-    <td><%= link_to 'Edit', edit_asset_path(asset) %></td>
-    <td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
+		<tr>
+			<td><%= asset.file_file_name %></td>
+			<td><%= asset.file_content_type %></td>
+			<td><%= number_to_human_size(asset.file_file_size) %></td>
+			<td><%= link_to 'Show', asset %></td>
+			<td><%= link_to 'Edit', edit_asset_path(asset) %></td>
+			<td><%= link_to 'Destroy', asset, :confirm => 'Are you sure?', :method => :delete %></td>
+		</tr>
 <% end %>
+	</tbody>
 </table>
 
 <br />
