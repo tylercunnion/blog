@@ -9,10 +9,21 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password, :password_confirmation
   helper_method :current_user_session, :current_user
   
-  before_filter :twitter_feed
+  before_filter :sidebars
+  
 
   private
-  	def current_user_session
+  
+  def sidebars
+    # TODO: Replace this later with a database table with sidebar names
+    @sidebars = ['twitter']
+    @sidebar = Sidebar.new
+    @sidebars.each do |s|
+      @sidebar.send(s)
+    end
+  end
+  
+  def current_user_session
 		return @current_user_session if defined?(@current_user_session)
 		@current_user_session = UserSession.find
 	end
@@ -47,12 +58,5 @@ class ApplicationController < ActionController::Base
 	def redirect_back_or_default(default)
 		redirect_to(session[:return_to] || default)
 	end
-	
-	def twitter_feed
-	  search = Twitter::Search.new.from('tylercunnion').per_page(5)
-	  @tweets = search.fetch.results
-  end
-
-
   
 end

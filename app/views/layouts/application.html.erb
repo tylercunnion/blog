@@ -20,8 +20,9 @@
 				<%= yield %>
 			</div>
 			<div id="sidebar">
-				<%= yield :sidebar %>
-				<%= render :partial => 'shared/sidebar' %>
+				<% @sidebars.each do |s| -%>
+					<%= render :partial => "sidebars/#{s}" -%>
+				<% end -%>
 			</div>
 			<div id="push"></div>	
 		</div>

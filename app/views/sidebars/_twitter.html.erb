@@ -1,0 +1,6 @@
+<aside id="twitter-tracker">
+	<h3>Twitter Tracker</h3>
+	<% @sidebar.tweets.each do |tweet| -%>
+		<p class="tweet"><%= tweet.text %> <%= time_element(Time.parse(tweet.created_at), {:text_format => "%r %D"}) %></p>
+	<% end -%>
+</aside>
