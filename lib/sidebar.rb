@@ -4,7 +4,7 @@ class Sidebar
   attr_reader :about_text
   
   def twitter
-    search = Twitter::Search.new.from('tylercunnion').per_page(5)
+    search = Twitter::Search.new.from('tylercunnion').per_page(3)
 	  @tweets = search.fetch.results
   end
   
