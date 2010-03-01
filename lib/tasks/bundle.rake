@@ -16,7 +16,10 @@ namespace :bundle do
       target = RAILS_ROOT + "/public/javascripts/bundle_#{bundle_name}.js"
 
       File.open(target, 'w+') do |f|
-	files.each { |file| f.puts JSMin.minify(file) }
+        files.each do |file|
+          script_file = File.new(file)
+          f.puts JSMin.minify(script_file)
+        end
       end
       targets << target
     end
