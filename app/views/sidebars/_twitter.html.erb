@@ -1,6 +1,8 @@
 <aside id="twitter-tracker">
 	<h3>Twitter Tracker</h3>
+	<% cache('twitterfeed', :expires_in => 1.hour) do -%>
 	<% @sidebar.tweets.each do |tweet| -%>
 		<p class="tweet"><%= linkify_twitter(tweet.text) %> <%= time_element(Time.parse(tweet.created_at), {:text_format => "%r %D"}) %></p>
+	<% end -%>
 	<% end -%>
 </aside>
