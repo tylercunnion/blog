@@ -1,5 +1,5 @@
 module Admin
-  class PostsController < ApplicationController
+  class PostsController < AdminController
 
   	before_filter :require_user
 
