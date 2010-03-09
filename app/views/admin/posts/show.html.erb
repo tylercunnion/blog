@@ -1,0 +1,14 @@
+<% @page_title = @post.title -%>
+<article>
+	<header>
+		<h1><%= @post.title %></h1>
+	</header>
+	
+	<%= markdown(@post.text) %>
+	
+	<footer>
+		<p>Posted on <%= time_element(@post.created_at) %> by <%=h @post.author.name %></p>
+		<%= "<p>" + link_to("Edit Post", edit_post_url(@post)) + "</p>" if current_user && current_user == @post.author %>	
+	</footer>
+	
+</article>

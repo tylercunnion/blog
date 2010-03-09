@@ -39,5 +39,7 @@ Rails::Initializer.run do |config|
   # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}')]
   # config.i18n.default_locale = :de
   
-  ActionController::Base.cache_store = :mem_cache_store, "localhost"
+  config.load_paths += %W( #{RAILS_ROOT}/app/sweepers )
+  config.cache_store = :mem_cache_store
+
 end
