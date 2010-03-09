@@ -1,13 +1,21 @@
+<table>
+	<thead>
+		<td>Title</td>
+		<td>Author</td>
+		<td>Published?</td>
+		<td>Created</td>
+		<td>Edit</td>
+		<td>View</td>
+	</thead>
+	<tbody>
 <% @posts.each do |post| -%>
-	<article>
-		<header>
-			<hgroup>
-				<h1><%= link_to(post.title, post) %></h1>
-				<h2><%= time_element(post.created_at) %> <%= "&mdash;" + link_to("Edit Post", edit_post_url(post)) if current_user && current_user == post.author %></h2>
-			</hgroup>
-		</header>
-		
-		<%= markdown(post.summary).blank? ? markdown(post.text).split("</p>")[0] + "</p>" : markdown(post.summary) %>
-		<p><%=link_to("Read More&hellip;", post) %></p>
-	</article>
+		<tr>
+			<td><%= post.title %></td>
+			<td><%= post.author.name %></td>
+			<td><%= post.created_at %></td>
+			<td><%= link_to("Edit", edit_admin_post_url(post)) %></td>
+			<td><%= link_to("View", post) %></td>
+		</tr>
 <% end -%>
+	</tbody>
+</table>
