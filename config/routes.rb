@@ -41,6 +41,10 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :posts
   
+  map.namespace :admin do |admin|
+    admin.resources :posts
+  end
+  
   map.root :posts
 
   # Install the default routes as the lowest priority.
