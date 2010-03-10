@@ -1,8 +1,6 @@
 module Admin
   class PostsController < AdminController
 
-  	before_filter :require_user
-
   	def index
   		@posts = Post.all(:include => :author, :order => 'created_at DESC')
   	end
