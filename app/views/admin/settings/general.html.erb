@@ -1,0 +1,11 @@
+<h1>Blog Settings</h1>
+
+<% form_for @blog_config, :url => {:action => :update} do |f| %>
+  	<%= f.error_messages %>
+  	<%= f.hidden_field :name %>
+
+	<p><%= label_tag "config_name", "Name" %> <%= text_field_tag "config[name]", @blog_config.config[:name] %></p>
+	
+	
+  	<p><%= f.submit "Save" %></p>
+<% end %>

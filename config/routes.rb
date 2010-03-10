@@ -46,6 +46,8 @@ ActionController::Routing::Routes.draw do |map|
   end
   
   map.root :posts
+  
+  map.settings 'admin/settings/:action', :controller => "admin/settings"
 
   # Install the default routes as the lowest priority.
   # Note: These default routes make all actions in every controller accessible via GET requests. You should
