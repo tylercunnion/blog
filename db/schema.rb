@@ -9,19 +9,12 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100310153732) do
+ActiveRecord::Schema.define(:version => 20100310155526) do
 
   create_table "assets", :force => true do |t|
     t.string   "file_file_name"
     t.string   "file_content_type"
     t.integer  "file_file_size"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "configs", :force => true do |t|
-    t.string   "name"
-    t.text     "settings"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -35,6 +28,13 @@ ActiveRecord::Schema.define(:version => 20100310153732) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "author_id"
+  end
+
+  create_table "settings", :force => true do |t|
+    t.string   "name"
+    t.text     "settings"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", :force => true do |t|
