@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100310155526) do
+ActiveRecord::Schema.define(:version => 20100310160029) do
 
   create_table "assets", :force => true do |t|
     t.string   "file_file_name"
@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(:version => 20100310155526) do
 
   create_table "settings", :force => true do |t|
     t.string   "name"
-    t.text     "settings"
+    t.text     "config"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
