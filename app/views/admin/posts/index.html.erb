@@ -1,17 +1,22 @@
+<h1>Posts</h1>
+
 <table>
 	<thead>
-		<td>Title</td>
-		<td>Author</td>
-		<td>Published?</td>
-		<td>Created</td>
-		<td>Edit</td>
-		<td>View</td>
+		<tr>
+			<th scope="col">Title</th>
+			<th scope="col">Author</th>
+			<th scope="col">Published?</th>
+			<th scope="col">Created</th>
+			<th scope="col">Edit</th>
+			<th scope="col">View</th>
+		</tr>
 	</thead>
 	<tbody>
 <% @posts.each do |post| -%>
 		<tr>
 			<td><%= post.title %></td>
 			<td><%= post.author.name %></td>
+			<td><%= post.published? %></td>
 			<td><%= post.created_at %></td>
 			<td><%= link_to("Edit", edit_admin_post_url(post)) %></td>
 			<td><%= link_to("View", post) %></td>
