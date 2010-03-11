@@ -6,6 +6,9 @@ class Post < ActiveRecord::Base
 	validates_presence_of :title, :text
 	validates_uniqueness_of :slug
 	
+	has_many :categorizations
+	has_many :categories, :through => :categorizations
+	
 	
 	private
 	  def create_slug
