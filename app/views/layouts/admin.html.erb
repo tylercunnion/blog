@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<title>Administration</title>
+		<meta charset="utf-8">
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+		<title>Blog Administration<%=h " | " + @page_title unless @page_title.blank? %></title>
+		<%= stylesheet_bundle 'admin', 'text' %>
+		<%= javascript_dev ['jquery-1.4.2', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js'] %>
+		<%= javascript_bundle 'common' %>
 	</head>
 	<body>
 		<%= yield %>
