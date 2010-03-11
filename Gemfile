@@ -12,3 +12,7 @@ gem "mysql"
 gem "twitter"
 gem "paperclip"
 
+
+group :development do
+	gem "thin"
+end
