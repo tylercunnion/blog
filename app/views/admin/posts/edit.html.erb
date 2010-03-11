@@ -1,7 +1,7 @@
 <h1>Editing: <%=h @post.title %></h1>
 
 
-<% form_for @post do |f| %>
+<% form_for [:admin, @post] do |f| %>
   <%= f.error_messages %>
   <%= render :partial => "form", :object => f %>
   <%= f.submit "Save Post" %>
