@@ -1,8 +1,7 @@
 ActionController::Routing::Routes.draw do |map|
+
   map.resources :categories
-
   map.resources :assets
-
   map.resource :user_session
   map.resource :account, :controller => "users"
   map.resources :users
@@ -14,10 +13,6 @@ ActionController::Routing::Routes.draw do |map|
     admin.settings "settings/:action", :controller => "settings"
   end
   
-  
-  
   map.root :posts
-  
-  #map.settings 'admin/settings/:action', :controller => "admin/settings"
 
 end

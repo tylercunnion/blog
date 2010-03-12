@@ -6,6 +6,6 @@
 
 <ul>
 <% @settings.each do |s| -%>
-	<li><%= link_to s.name.capitalize, settings_url(s.name) %></li>
+	<li><%= link_to s.name.capitalize, admin_settings_url(s.name) %></li>
 <% end -%>
 </ul>

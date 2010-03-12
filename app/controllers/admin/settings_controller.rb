@@ -17,7 +17,7 @@ module Admin
       
       if @setting.save
         flash[:notice] = 'Settings saved.'
-        redirect_to :action => @setting.name
+        redirect_to admin_settings_url
       else
         render :action => @setting.name
       end       
