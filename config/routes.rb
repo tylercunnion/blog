@@ -11,10 +11,13 @@ ActionController::Routing::Routes.draw do |map|
   map.namespace :admin do |admin|
     admin.resources :posts
     admin.resources :categories
+    admin.settings "settings/:action", :controller => "settings"
   end
+  
+  
   
   map.root :posts
   
-  map.settings 'admin/settings/:action', :controller => "admin/settings"
+  #map.settings 'admin/settings/:action', :controller => "admin/settings"
 
 end
