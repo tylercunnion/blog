@@ -40,11 +40,16 @@ article {
 	}
 
 	footer { 
-		p { 
 			margin: 0; 
 			font-size: 12 / @base_font_size;
 			line-height: @line_height / 12;
-		}
+			
+			h3 {
+				font-weight: bold;
+				font-family: inherit;
+			}
+
+			h3:after { content: ': '; }
 	}
 
 	margin-bottom: @line_height / @base_font_size;

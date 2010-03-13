@@ -8,7 +8,8 @@
 	
 	<footer>
 		<p>Posted on <%= time_element(@post.created_at) %> by <%=h @post.author.name %></p>
-		<p>Categories: <% @post.categories.each do |cat| %><%= cat.name %><% end %>
+		<h3>Categories</h3>
+		<ul class="categories"><% @post.categories.each do |cat| %><li><%= link_to cat.name, cat %></li><% end %></ul>
 		<%= "<p>" + link_to("Edit Post", edit_admin_post_url(@post)) + "</p>" if current_user && current_user == @post.author %>	
 	</footer>
 	
