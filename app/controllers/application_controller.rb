@@ -16,7 +16,7 @@ class ApplicationController < ActionController::Base
   
   def sidebars
     # TODO: Replace this later with a database table with sidebar names
-    @sidebars = ['about', 'twitter']
+    @sidebars = ['about', 'twitter', 'category_list']
     @sidebar = Sidebar.new
     @sidebars.each do |s|
       @sidebar.send(s)

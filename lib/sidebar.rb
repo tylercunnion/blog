@@ -2,6 +2,7 @@ class Sidebar
   
   attr_reader :tweets
   attr_reader :about_text
+  attr_reader :categories
   
   def twitter
     if Rails.env.production?
@@ -18,6 +19,10 @@ class Sidebar
   
   def about
     @about_text = "Here is my crappy blog. Welcome."
+  end
+
+  def category_list
+	@categories = Category.find(:all, :order => :name)
   end
   
 end
