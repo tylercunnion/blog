@@ -7,6 +7,7 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users
   map.resources :posts
   
+  map.dashboard 'admin', :controller => 'admin', :action => 'index'
   map.namespace :admin do |admin|
     admin.resources :posts
     admin.resources :categories
